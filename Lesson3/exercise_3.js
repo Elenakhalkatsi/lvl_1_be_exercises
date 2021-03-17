@@ -36,7 +36,7 @@ function printHelloUser(userName) {
 // 3. თუ ასაკი მეტია თვრამეტზე გამოიძახეთ login()
 
 function askUserAge() {
-    userAge = Number(prompt("Enter your age: "));
+    const userAge = Number(prompt("Enter your age: "));
     
     if (userAge < 18) {
         console.log("You're not allowed.");
@@ -54,8 +54,8 @@ function askUserAge() {
 // თუ არ დაემთხვა დაბეჭდეთ Incorrect username or password და ამის შემდეგ გამოიძახეთ ფუნქცია login()
 
 function login() {
-    user_name = prompt("Enter your username: ");
-    user_password = prompt("Enter your password: ");
+    const user_name = prompt("Enter your username: ");
+    const user_password = prompt("Enter your password: ");
 
     if (user_name === username && user_password === password) {
         printHelloUser(user_name);
@@ -81,11 +81,11 @@ function login() {
 */
 
 function runBankApp() {
-    operation = prompt("Operations: \n1. calc\n2. logout\n3. changepassword\n Choose operation: ");
+    const operation = prompt("Operations: \n1. calc\n2. logout\n3. changepassword\n Choose operation: ");
     if (operation === "calc" || operation === "1") {
-        starter = Number(prompt("Enter starter amount money: "));
-        percentage = Number(prompt("Enter yearly percentage: "));
-        years = Number(prompt("Enter how many years? "));
+        const starter = Number(prompt("Enter starter amount money: "));
+        const percentage = Number(prompt("Enter yearly percentage: "));
+        const years = Number(prompt("Enter how many years? "));
         calculateYearlyGain(starter, percentage, years);
         
         runBankApp();
@@ -106,7 +106,7 @@ function runBankApp() {
 */
 
 function calculateYearlyGain(starter, percentage, years) {
-    calcRes = String((starter * percentage / 100) * years + starter);
+    const calcRes = String((starter * percentage / 100) * years + starter);
     printWithStars(calcRes);
 }
 
@@ -126,7 +126,7 @@ function logout(userName) {
 // askUserAge();
 
 function changePassword() {
-    oldPassword = prompt("Enter your old password: ");
+    const oldPassword = prompt("Enter your old password: ");
     if (oldPassword === password) {
         password = prompt("Enter your new password: ")
         login();

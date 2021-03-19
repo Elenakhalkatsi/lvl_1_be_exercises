@@ -117,9 +117,6 @@ function describeYourSelf(){
     // დაწერეთ ფუნქცია calculateAgeBasedOnBirthYear(birthYear); - ამ ფუნქციამ 2021-ს უნდა გამოაკლოს დაბადების წელი და უკან დააბრუნოს მიღებული რიცხვი
     // calculateAgeBasedOnBirthYear()-ის მიერ დაბრუნებული რიცხვი შეადარეთ თქვენ მიერ დეკლარირებულ ასაკს
     // თუ ასაკი დაემთხვა: გამოიტანეთ: "თვლა მცდონია" თუ არა: "თვლაში მიჭირს"
-    function calculateAgeBasedOnBirthYear(birthYear) {
-        return 2021 - birthYear;
-    }
 
     if(calculateAgeBasedOnBirthYear(birthDate) === age) {
         console.log("Tvla mcodnia");
@@ -134,25 +131,9 @@ function describeYourSelf(){
     let res = sum(first, sec);
     console.log('Sum', res);
 
-    function sum(x, y) {
-        return x + y;
-    }
-    
     // დავალება 8:
     // ზემოთ დაწერილი ფუნქციის მაგვარად დაწერეთ ფუნქციები multiply, divide, subract, გამოიძახეთ ისინი და გამოიტანეთ მათი შედეგები
     // console.log()-აბი არ გამოიყენოთ არცერთ ზემოთ აღნიშნულ ფუნქციაში(multiply, divide, subract)
-    function multiply (x, y) {
-        return x * y;
-    }
-
-    function divide (x, y) {
-        return x / y;
-    }
-
-    function subract (x, y) {
-        return x - y;
-    }
-
     alert(String(multiply(first, sec)));
     alert(String(divide(first, sec)));
     alert(String(subract(first, sec)));
@@ -192,6 +173,10 @@ function isAdult (age) {
     return isAdult; 
 }
 
+function calculateAgeBasedOnBirthYear(birthYear) {
+    return 2021 - birthYear;
+}
+
 // don't forget to add arguments
 function multNegative (x, y) {
     // Impelement multNegative function here
@@ -217,4 +202,20 @@ function multPositiveNumbers (num1, num2) {
     // BTW: ეს არ არის საუკეთესო გადაწყვეტილება ამ ფუნქციის. გაცილებით უფრო მარტივადაც შეიძლება. 1 გამრავლებით. 
 
     return num1 * num2;
+}
+
+function sum(x, y) {
+    return x + y;
+}
+
+function multiply (x, y) {
+    return x * y;
+}
+
+function divide (x, y) {
+    return x / y;
+}
+
+function subract (x, y) {
+    return x - y;
 }

@@ -35,16 +35,16 @@ function listAllArrayElements(arrayToList) {
 }
 
 // 9.
-const popularFoods = ['Burger', 'Pizza', 'Steak', 'xashlama', 'Ceasars Salad'];
+const popularFoods = ['Burger', 'Pizza', 'Steak', 'ხაშლამა', 'Ceasars Salad'];
 // დაწერეთ ფუნქცია containsGeorgianFood(foodArray) - შეამოწმეთ გადმოწოდებულ array-ში არის თუ არა ('ხაშლამა ან ხაში')
 // თუ ხაშლამა ან ხაში არის foodArray-ში დაა-return-ეთ true
 // გამოძახებისას გამოიყენეთ popularFoods - array
 function containsGeorgianFood(foodArray) {
-    foodArray.forEach(food => {
-        if (food === 'xashlama' || food === 'ხაში') {
+    for (let i = 0; i < foodArray.length; i += 1) {
+        if (foodArray[i] === 'ხაშლამა' || foodArray[i] === 'ხაში') {
             return true;
         }
-    });
+    }
     return false;
 }
 
@@ -97,15 +97,15 @@ printAllEven(100001, 100005);
 // დაწერეთ ფუნქცია arrayContainsNumbers(arrayToCheck) - ამ ფუნქციამ უნდა დაა-return-ოს true თუ გადმოწოდებული array-ის ერთი ელემენტი მაინც რიცხვია.
 function arrayContainsNumbers(arrayToCheck) {
     for(let i = 0; i < arrayToCheck.length; i++){
-        if (typeof(arrayToCheck[i]) === Number) {
-            console.log(arrayToCheck[i]);
+        if (typeof(arrayToCheck[i]) === "number") {
+            return true;
         }
     }
-
+    return false;
 }
 
 const arrayToCheck = ["bla", "bla", 1, "bla"];
-arrayContainsNumbers(arrayToCheck);
+console.log(arrayContainsNumbers(arrayToCheck));
 
 // ბონუს დავალება 1
 // customRound(numToRound) - თუ რიცხვის არამთელი მხარე ნაკლებია 0.8 -ზე რიცხვი დაამრგვალეთ ქვემოთ ხოლო სხვა შემთხვევაში დაამრგვალეთ ზემოთ
